@@ -1,14 +1,11 @@
 import cv2
 import numpy as np
-import base64
 import traceback
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from typing import Optional, Dict, Union
-import io
-from PIL import Image
+from typing import  Dict, Union
 
 from detector import detectar_botella_y_nivel
 from utils import image_to_base64
